@@ -8,6 +8,7 @@ Simple Roku Scene Graph channel containing following Roku native components
 7. Event Handling
 8. Navigations
 9. Data transitions
+10. Network Connections
 
 Take the pull, build the code at VS Code or at Eclipse, Install the channel at Roku Device.
 
