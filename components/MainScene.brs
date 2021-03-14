@@ -46,7 +46,8 @@ sub configureUI()
     'Back Text Label
     m.backTextLabel = m.top.findNode("backTextLabel")
 
-
+    'Connect API
+    'connectAPI()
 end sub
 
 
@@ -147,3 +148,26 @@ function onKeyEvent(key as string, press as boolean) as boolean
 
     return result
 end function
+
+sub connectAPI()
+    di = CreateObject("roDeviceInfo")
+    if(di.GetLinkStatus())
+        m.getAPICall = createObject("roSGNode", "GetAPICall")
+        m.getAPICall.observeField("status", "onAPIConnected")
+        m.getAPICall.control = "RUN"
+    else
+        ? m.UIConstants.root.ErrorMessages.titleAlert
+        ? "Please connect to internet and try again"
+    end if
+end sub
+
+sub onAPIConnected()
+
+    if m.getAPICall.content <> invalid
+        ? "API Response Received"
+        stop
+    else
+        ? "Something went wrong. Please try later"
+        stop
+    end if
+end sub

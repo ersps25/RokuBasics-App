@@ -7,7 +7,6 @@ sub configureUI()
     m.videoPlayer = m.top.findNode("liveStream")
     m.bufferingAnimation = m.top.findNode("bufferingAnimation")
     m.videoErrorPoster = m.top.findNode("videoErrorPoster")
-    
 end sub
 
 sub onUrlReceived()
@@ -21,7 +20,6 @@ sub initiateLiveVideo()
         m.videoPlayer.control = "stop"
     end if
     content = createObject("roSGNode", "ContentNode")
-    'content.url = "https://cdn-shop-lc-01.akamaized.net/Content/HLS_HLS/Live/channel(roku)/index.m3u8"
     content.url = m.url
     content.streamFormat = "hls"
     m.videoPlayer.content = content
