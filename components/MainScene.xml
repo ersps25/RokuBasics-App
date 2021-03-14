@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--********** Copyright 2016 Roku Corp.  All Rights Reserved. **********-->
+
+<component name="MainScene" extends="Scene"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://devtools.web.roku.com/schema/RokuSceneGraph.xsd">
+  <!-- importing main handler -->
+  <script type="text/brightscript" uri="pkg:/components/MainScene.brs" />
+
+  <interface>
+    <field id="userInput" type="string" alwaysNotify="true" onChange="onUserInputReceived"/>
+  </interface>
+
+  <children>
+
+    <Poster id="poster" visible="false" translation="[1300,100]" uri="pkg:/images/icon_focus_sd.png" />
+
+    <Rectangle id="bgRectId" visible="false" translation="[20,100]" height="700" width="400" color="#1A182D"/>
+
+    <Label id="labelId" visible="false" text="Introductory Session" translation="[700,100]" color="#000000"/>
+
+    <Button id="btnId1" visible="false" text="Intro Button 1" width="400" height="100" translation="[700,400]"/>
+    <Button id="btnId2" visible="false" text="Intro Button 2" width="400" height="100" translation="[1200,400]"/>
+
+    <Rectangle id="bgRectId1" visible="false" translation="[600,600]" height="100" width="500" color="#ffffff">
+      <Label id="labelId1" text="Video Screen1" height="100" width="500" horizAlign="center" vertAlign="center" color="#000000"/>
+      <Button id="buttonId1" text="" width="400" height="100" iconUri="" focusedIconUri=""  focusBitmapUri="pkg:/images/img_transparent" translation="[0,0]"/>
+    </Rectangle>
+
+    <Rectangle id="bgRectId2" visible="false" translation="[1200,600]" height="100" width="500" color="#ffffff">
+      <Label id="labelId2" text="Video Screen2" height="100" width="500" horizAlign="center" vertAlign="center" color="#000000"/>
+      <Button id="buttonId2" text="" width="400" height="100" iconUri="" focusedIconUri=""  focusBitmapUri="pkg:/images/img_transparent" translation="[0,0]"/>
+    </Rectangle>
+
+    <Label id="backTextLabel" text="" height="100" translation="[1200,800]" width="500" horizAlign="center" vertAlign="center" color="#000000"/>
+
+  </children>
+
+
+</component>
