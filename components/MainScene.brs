@@ -165,9 +165,7 @@ sub onAPIConnected()
 
     if m.getAPICall.content <> invalid
         ? "API Response Received"
-        stop
     else
         ? "Something went wrong. Please try later"
-        stop
     end if
 end sub
