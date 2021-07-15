@@ -24,15 +24,22 @@
 
     <Rectangle id="bgRectId1" visible="false" translation="[600,600]" height="100" width="500" color="#ffffff">
       <Label id="labelId1" text="Video Screen1" height="100" width="500" horizAlign="center" vertAlign="center" color="#000000"/>
-      <Button id="buttonId1" text="" width="400" height="100" iconUri="" focusedIconUri=""  focusBitmapUri="pkg:/images/img_transparent" translation="[0,0]"/>
+      <Button id="buttonId1" text="" width="400" height="100" iconUri="" focusedIconUri="" focusBitmapUri="pkg:/images/img_transparent" translation="[0,0]"/>
     </Rectangle>
 
     <Rectangle id="bgRectId2" visible="false" translation="[1200,600]" height="100" width="500" color="#ffffff">
       <Label id="labelId2" text="Video Screen2" height="100" width="500" horizAlign="center" vertAlign="center" color="#000000"/>
-      <Button id="buttonId2" text="" width="400" height="100" iconUri="" focusedIconUri=""  focusBitmapUri="pkg:/images/img_transparent" translation="[0,0]"/>
+      <Button id="buttonId2" text="" width="400" height="100" iconUri="" focusedIconUri="" focusBitmapUri="pkg:/images/img_transparent" translation="[0,0]"/>
     </Rectangle>
 
     <Label id="backTextLabel" text="" height="100" translation="[1200,800]" width="500" horizAlign="center" vertAlign="center" color="#000000"/>
+
+    <SimpleLabel id="testLabel" font="fontUri:MediumBoldSystemFont"
+  text = "Application Development Made Easy!"
+  horizOrigin = "left"
+  vertOrigin = "baseline" translation="[640,360]" />
+
+    <Button id="grpId" visible="true" text="Roku Group" width="400" height="100" translation="[100,900]"/>
 
   </children>
 

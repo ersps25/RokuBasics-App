@@ -22,6 +22,9 @@ sub configureUI()
     m.labelId2 = m.top.findNode("labelId2")
     m.buttonId2.observeField("buttonSelected", "onbutton2Selected")
 
+    m.grpId = m.top.findNode("grpId")
+    m.grpId.observeField("buttonSelected", "onGrpSelected")
+
 
     'Actual Buttons
     m.btnId1 = m.top.findNode("btnId1")
@@ -50,6 +53,20 @@ sub configureUI()
     'connectAPI()
 end sub
 
+sub onGrpSelected()
+    m.rokugrp = m.top.createChild("RokuGroup")
+    m.rokugrp.ObserveField("removeGrpScreen", "onRemoveGrpScreen")
+    m.rokugrp.visible = true
+    m.rokugrp.parentNode = m.top
+end sub
+
+sub onRemoveGrpScreen()
+    if m.rokugrp <> invalid
+        m.top.removeChild(m.rokugrp)
+        m.rokugrp = invalid
+        m.grpId.setFocus(true)
+    end if
+end sub
 
 sub onbutton1Selected()
     m.dialog = createObject("roSGNode", "Dialog")
@@ -135,13 +152,24 @@ function onKeyEvent(key as string, press as boolean) as boolean
                 m.buttonId1.setFocus(false)
                 m.bgRectId1.color = "#A9A9A9"
                 m.labelId1.color = "#000000"
-
+            else if m.grpId.hasFocus()
+                m.buttonId1.setFocus(true)
+                m.bgRectId1.color = "#000000"
+                m.labelId1.color = "#ffffff"
+                m.grpId.setFocus(false)
             end if
         else if key = "down"
             if m.btnId1.hasFocus()
                 m.buttonId1.setFocus(true)
                 m.bgRectId1.color = "#000000"
                 m.labelId1.color = "#ffffff"
+            else if m.buttonId1.hasFocus()
+                m.grpId.setFocus(true)
+
+                m.buttonId1.setFocus(false)
+                m.bgRectId1.color = "#A9A9A9"
+                m.labelId1.color = "#000000"
+
             end if
         end if
     end if

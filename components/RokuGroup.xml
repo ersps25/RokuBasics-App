@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--********** Copyright 2016 Roku Corp.  All Rights Reserved. **********-->
+
+<component name="RokuGroup" extends="Group"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://devtools.web.roku.com/schema/RokuSceneGraph.xsd">
+    <!-- importing main handler -->
+    <script type="text/brightscript" uri="pkg:/components/RokuGroup.brs" />
+
+    <interface>
+        <field id = "removeGrpScreen" type="string" alwaysNotify="true"/>
+        <field id = "parentNode" type="node" alwaysNotify="true"/>
+    </interface>
+
+    <children>
+        <Rectangle id="background" visible="true" translation="[0,0]" height="1080" width="1920" color="#1A182D"/>
+
+
+        <LayoutGroup id="layoutGrp"  layoutDirection="horiz" vertAlignment="top">
+
+            <Label id="backTextLabel" text="Label1" height="100" width="200" color="#000000"/>
+            <Label id="backTextLabel" text="Label2" height="100" width="200" color="#000000"/>
+            <Label id="backTextLabel" text="Label3" height="100" width="200" color="#000000"/>
+            <Label id="backTextLabel" text="Label4" height="100" width="200" color="#000000"/>
+
+        </LayoutGroup>
+
+
+        <ButtonGroup id="btnGrp" translation="[100,500]">
+
+            <!-- <Button id="id1" visible="true" text="Button1"/>
+            <Button id="id1" visible="true" text="Button2"/>
+            <Button id="id1" visible="true" text="Button3"/>
+            <Button id="id1" visible="true" text="Button4"/>
+            <Button id="id1" visible="true" text="Button5"/>
+            <Button id="id1" visible="true" text="Button6"/> -->
+
+        </ButtonGroup>
+    </children>
+
+
+</component>
