@@ -324,14 +324,14 @@ Function getGetApiJsonWithoutResponse(url as String, params as String,isShowDial
                     code = msg.GetResponseCode()
                     ''? "**** Code ****";code
                     responseString = msg.GetString()
-                    '? "***** responseString in failure case ******";responseString
+                    ? "***** responseString in failure case ******";responseString
                     responseStringFail = msg.GetFailureReason()
                     '? "***** responseString in failure case ******";responseStringFail
                     If (code = 200) then
                         responseString = msg.GetString()
                         '? "*********** responseString in Fetch Price Api*********== *****";responseString
                         json = ParseJSON(responseString)
-                       '? "**********8 json == ****************";json
+                       ? "**********8 json == ****************";json
                         if json <> invalid
                             return json
                         else

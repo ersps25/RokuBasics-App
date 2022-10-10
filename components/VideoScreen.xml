@@ -11,7 +11,7 @@
     </interface>
 
     <children>
-        <Video id="liveStream" width="1920" height="1080" translation="[0,0]" enableScreenSaverWhilePlaying="false" enableUI="false" />
+        <Video id="liveStream" width="1920" height="1080" translation="[0,0]" enableScreenSaverWhilePlaying="false" enableUI="true" />
 
         <LoadingIndicator id="bufferingAnimation" visible = "false" imageUri="pkg:/images/loader.png" centered="false" backgroundColor="0x000000" imageWidth="100" text="Buffering..." />
         <Poster id="videoErrorPoster" visible="false" height="1080" width="1920" loadWidth = "1920" loadHeight = "1080" loadDisplayMode = "limitSize" uri="pkg:/images/liveNotAvailable.jpg"></Poster>
