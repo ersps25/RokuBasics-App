@@ -1,4 +1,4 @@
-Simple Roku Scene Graph channel containing following Roku native components
+# Simple Roku Scene Graph channel for beginners containing following Roku native components
 1. Label
 2. Rectangle
 3. Button
@@ -10,6 +10,7 @@ Simple Roku Scene Graph channel containing following Roku native components
 9. Data transitions
 10. Network Connections
 
-Take the pull, build the code at VS Code or at Eclipse, Install the channel at Roku Device.
+# Installation Guide
+Take the pull of repo, build the code at VS Code or at Eclipse, sideload the channel at Roku Device using Application Installer
 
 Happy Coding!
