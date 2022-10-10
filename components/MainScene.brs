@@ -50,7 +50,8 @@ sub configureUI()
     m.backTextLabel = m.top.findNode("backTextLabel")
 
     'Connect API
-    'connectAPI()
+    connectAPI()
+    
 end sub
 
 sub onGrpSelected()
@@ -89,7 +90,7 @@ sub onbutton2Selected()
     m.VideoScreen2 = m.top.createChild("VideoScreen")
     m.VideoScreen2.ObserveField("removeVideoScreen", "onRemoveVideoScreen")
     m.VideoScreen2.visible = true
-    m.VideoScreen2.url = "https://demo.unified-streaming.com/video/tears-of-steel/tears-of-steel-multiple-subtitles.ism/.m3u8"
+    m.VideoScreen2.url = "https://cph-p2p-msl.akamaized.net/hls/live/2000341/test/master.m3u8"
     m.VideoScreen2.setFocus(true)
     m.VideoScreen2.parentNode = m.top
 end sub
