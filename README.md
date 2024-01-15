@@ -1,4 +1,4 @@
-# Simple Roku Scene Graph channel for beginners containing following Roku native components
+# Simple Roku Scene Graph channel for beginners containing the following Roku native components
 1. Label
 2. Rectangle
 3. Button
@@ -10,7 +10,7 @@
 9. Data transitions
 10. Network Connections
 
-# How Brightscript label
+# How to create Brightscript label?
     <?xml version="1.0" encoding="UTF-8"?>
     <component name="MainScene" extends="Scene"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://devtools.web.roku.com/schema/RokuSceneGraph.xsd">
@@ -20,16 +20,16 @@
         </children>
     </component>
 
-# How to create Brightscript Rectangle (Embed above code inside above structure)
+# How to create Brightscript Rectangle (Embed above code inside above structure)?
     <Rectangle id="bgRectId" visible="false" translation="[20,100]" height="700" width="400" color="#1A182D"/>
 
-# How to create Brightscript Button
+# How to create Brightscript Button?
     <Button id="btnId1" visible="false" text="Sample Button" height="100" translation="[700,400]"/>
 
-# How to create Brightscript Poster
+# How to create Brightscript Poster?
      <Poster id="poster" visible="false" translation="[1300,100]" uri="pkg:/images/icon_focus_sd.png" />
 
-# How to create Brightscript Video Node
+# How to create Brightscript Video Node?
     
     Xml Part : 
 
